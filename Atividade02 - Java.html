@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar se um Número é Par ou Ímpar</title>
+    <script>
+
+        function verificarPAROuIMPAR() {
+            
+            let numero = parseInt(prompt("Insira um número:"));
+
+            if (isNaN(numero)) {
+                alert("Atenção! Insira um número válido.");
+                return;
+            }
+
+            if (numero % 2 === 0) {
+                alert(`O número ${numero} é par.`);
+            } else {
+                alert(`O número ${numero} é ímpar.`);
+            }
+        }
+
+    </script>
+</head>
+<body>
+    
+    <button onclick="verificarPAROuIMPAR()">Verificar se um Número é Par ou Ímpar</button>
+
+
+</body>
+</html>

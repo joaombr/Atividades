@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular Média das Notas</title>
+    <script>
+        function calcularMedia() {
+            
+            let nota1 = parseFloat(prompt("Informe a 1° nota:"));
+            let nota2 = parseFloat(prompt("Informe a 2° nota:"));
+            let nota3 = parseFloat(prompt("Informe a 3° nota:"));
+            let nota4 = parseFloat(prompt("Informe a 4° nota:"));
+
+            if (isNaN(nota1) || isNaN(nota2) || isNaN(nota3) || isNaN(nota4)) {
+                alert("Atenção! Insira números válidos.");
+                return;
+            }
+
+            let media = (nota1 + nota2 + nota3 + nota4) / 4;
+
+            media = media.toFixed(2);
+
+            if (media >= 7) {
+                console.log(`Aprovado! A média é ${media}`);
+                alert(`Aprovado! A média é ${media}`);
+            } else {
+                console.log(`Reprovado! A média é ${media}`);
+                alert(`Reprovado! A média é ${media}`);
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+    <button onclick="calcularMedia()">Calcular a Média das Notas</button>
+</body>
+</html>
